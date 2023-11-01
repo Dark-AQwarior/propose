@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b1522;
+}
+
+.heart{
+    height: 70px;
+    width: 70px;
+    background-color: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heart 0.6s linear infinite;
+}
+
+@keyframes heart{
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+    }
+    30%{
+        transform: rotate(-45deg) scale(1.05);
+    }
+    50%{
+        transform: rotate(-45deg) scale(1.02);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.00);
+    }
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+.heart:before{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: -10px -10px 90px #f20044;
+}
+
+.heart:after{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #f20044;
+    right: -50%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 90px #f20044;
+}
+
+.love{
+    display: flex; 
+    justify-content: space-between;
+    position: relative;
+    color: antiquewhite;
+    font-family: 'Romantic', sans-serif;
+    font-size: 30px;
+}
+
+#fade {
+    -khtml-opacity: .50;
+    -moz-opacity: .50;
+    -ms-filter: ”alpha(opacity=50)”;
+    filter: alpha(opacity=50);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+    opacity: .50;
+}
+  
+.button-yes {
+    margin-top: 350px;
+    margin-left: -450px;
+    text-decoration: none;
+    background: #f20044 ;
+    padding: 15px 40px;
+    border-radius: 5px;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+}
+
+.glow-button-yes:hover {
+    box-shadow: 0 5px 15px #f20044;
+    margin-top: 300px;
+    margin-left: -450px;
+    text-decoration: none;
+    color: beige;
+    background: black;
+    padding: 20px 50px;
+    border-radius: 10px;
+    font-size: large;
+}
+
+  
+.glow-button-no:hover {
+    box-shadow: 0 5px 15px #f20044;
+    margin-top: 300px;
+    margin-left: 100px;
+    text-decoration: none;
+    color: beige;
+    background: black;
+    padding: 20px 50px;
+    border-radius: 10px;
+    font-size: large;
+}
+
+.button-no {
+    margin-top: 350px;
+    margin-left: 100px;
+    text-decoration: none;
+    background: #f20044 ;
+    padding: 15px 40px;
+    border-radius: 5px;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+}
+
+.horror{
+    height: 70px;
+    width: 70px;
+    background-color: #f2004569;
+    position: relative;
+    box-shadow: -5px 5px 90px #4e3e42;
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
